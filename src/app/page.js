@@ -43,12 +43,13 @@ const IndexPage = () => {
     a.click();
     URL.revokeObjectURL(url);
   };
+ 
 
   return (
     <>
       <div className="flex-col flex justify-center items-center w-screen">
         <div className="p-4 text-center max-w-xs">
-          <p className="p-2">Vælg cellestørrelse</p>
+          <p className="p-2">Vælg Hexagonernes radius (i km) </p>
           <form onSubmit={handleFormSubmit}>
             <input
               type="number"
@@ -68,7 +69,7 @@ const IndexPage = () => {
       {hexagonCenters.length > 0 && (
         <div className="flex justify-center">
           <button
-            className="bg-blue-500 m-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-10"
+            className="bg-blue-950 m-5 hover:bg-blue-800 min-w-[15vw] text-white font-bold py-2 px-4 rounded z-10"
             onClick={downloadHexCenters}
           >
             Download Hex Centers
